@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+
+import { AppRoutingModule,routingComponets } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HubComponent } from './hub/hub.component';
+// import { LandingPageComponent } from './landing-page/landing-page.component';
+// import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HubComponent,
+    routingComponets
+    // LandingPageComponent,
+    // AboutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
