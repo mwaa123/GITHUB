@@ -8,12 +8,12 @@ import  {ProfileService} from '../profile.service';
 export class LandingPageComponent implements OnInit {
  profile:any;
 
-  // constructor(private ProfileService: ProfileService) { 
-  //   this.ProfileService.getProfileInfo().subscribe(profile =>{
-  //     console.log(profile);
-  //     this.profile = profile;
-  //   });
-  // }
+  constructor(private ProfileService: ProfileService) { 
+    this.ProfileService.getProfileInfo().subscribe(profile =>{
+      console.log(profile);
+      this.profile = profile;
+    });
+  }
 
   ngOnInit(): void {
   }
