@@ -7,12 +7,18 @@ import  {ProfileService} from '../profile.service';
 })
 export class LandingPageComponent implements OnInit {
  profile:any;
+ repos:any;
 
   constructor(private ProfileService: ProfileService) { 
     this.ProfileService.getProfileInfo().subscribe(profile =>{
       console.log(profile);
       this.profile = profile;
     });
+
+    this.ProfileService.getProfileRepos().subscribe(repos =>{
+      console.log(repos);
+      this.repos = repos
+    })
   }
 
   ngOnInit(): void {

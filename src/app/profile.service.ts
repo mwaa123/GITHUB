@@ -9,6 +9,8 @@ import{map}from 'rxjs/operators'
 export class ProfileService {
   private username:'string';
   private apiKey:''
+  private clientid = '92574d6eaf446dd40556';
+  private clientsecret ='1e2ef9e47bd6284dd2e6d44d26c212a3e7f058bc';
   constructor( private http:HttpClient) { 
   console.log("service is now ready");
   
@@ -16,7 +18,13 @@ export class ProfileService {
   this.apiKey  =''
   };
   getProfileInfo(){
-    return this.http.get("https://api.github.com/users/mwaa123? 7129c1942b0707acd1bb911895c6a7893bcbd9e0=" + this.username + "?apiKey")
+    return this.http.get("https://api.github.com/users/mwaa123?" + this.username +
+    +"?client_id="+this.clientid + "&client_secret=" + this.clientsecret);
   }
+
+  getProfileRepos(){
+    return this.http.get("https://api.github.com/users/mwaa123?" + this.username +
+    +"/repos?client_id="+this.clientid + "&client_secret=" + this.clientsecret);
+   }
 }
 // 7129c1942b0707acd1bb911895c6a7893bcbd9e0
