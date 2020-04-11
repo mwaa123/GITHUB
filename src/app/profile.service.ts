@@ -24,7 +24,7 @@ export class ProfileService {
 
   getProfileRepos(){
     return this.http.get("https://api.github.com/users/mwaa123?" + this.username +
-    +"/repos?client_id="+this.clientid + "&client_secret=" + this.clientsecret);
-   }
-}
-// 7129c1942b0707acd1bb911895c6a7893bcbd9e0
+//     +"/repos?client_id="+this.clientid + "&client_secret=" + this.clientsecret);
+//    }
+// }
+// // 7129c1942b0707acd1bb911895c6a7893bcbd9e0
