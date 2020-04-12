@@ -63,6 +63,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  [ruthwanjiramugo@gmail.com]
 
 ## License
-[LICENCE](/home/ruth/Quote/LICENCE.md)
+[LICENCE](/home/ruth/github/LICENCE.md)
 
 * Copyright (c) 2019 **Ruth Mugo**
