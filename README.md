@@ -10,7 +10,7 @@ This is an agular application used to help users serch for their github informat
 like their repositories ,followers,username and basically interact with it.
 
 ## Live link
-
+https://agitated-euler-995f83.netlify.com/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
