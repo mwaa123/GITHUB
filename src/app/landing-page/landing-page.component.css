@@ -9,18 +9,18 @@
 /* .page {
     text-align: center;
 } */
-.card{
+/* .card{
     background-image: url(./rtg.jpg);
     background-repeat: no-repeat;
      width:500px;
     height: 500px;
-     
-}
+      */
+/* } */
 /* .row{
     background-image: url(./ser.jpg);
     background-repeat: no-repeat;
 } */
-.col-md-6{
+/* .col-md-6{
     background-image: url(./ser.jpg);
     background-repeat: no-repeat;
     height:450px;
@@ -28,4 +28,76 @@
 }
 .search{
     padding-right: 53px;
+} */
+.info{
+    margin:10Px ;
+    padding:15Px ;
+   
+    height:50px ;
+    width:200px ;
 }
+
+
+.gen{
+    display: flex;
+    justify-content: center;
+}
+.img{
+    width:100%;
+    height:100% ;
+}
+
+.three{
+    margin-left:15px ;
+}
+ .card{
+    width: 47%;
+    margin:10px ;
+    box-sizing: border-box;
+    box-shadow:2px 2px 2px silver ;
+    border-radius:5% ;
+ }
+ .card:hover{
+     background-color: gainsboro;
+ }
+.all{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.all:hover{
+    background-color:blue
+}
+.card-title{
+font-weight: 800;
+}
+
+
+.line{
+    display: flex;
+}
+.repo{
+    margin:0 7px 0 7px ;
+    
+    outline: none;
+}
+ #one{
+    
+    color:yellowgreen;
+} 
+.name{
+    font-size:30px ;
+    color: rgb(41, 54, 41);
+    font-weight:600 ;
+}
+.name:hover{
+    color: rgb(56, 90, 56); ;
+}
+.git{
+   font-size:22px ; 
+   font-weight: 700;
+
+}
+.repo1{
+    color: rgb(131, 84, 67);
+};

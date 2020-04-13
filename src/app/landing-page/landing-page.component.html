@@ -1,13 +1,9 @@
 <div class="header">
     <h1>GITHUB</h1>
 </div>
- <form action="" class="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="search your git username"[(ngModel)]
-        ="username" name="username"(keyup)="getProfile()" >
-
-    </div>
-</form>
+ <div class="searchbar"> 
+     <app-search-form (searchOutput)= "search($event)" class="form"></app-search-form> 
+ </div>
     <div class="jumbotron">
         <h1 class="display-4 text-center">Learn Git and Github without any code</h1>
         <hr class="my-4">
@@ -16,63 +12,73 @@
         <a style="text-align: center;"   routerLink = '/about' routerLinkActive ='active'>LEARN ABOUT</a>  
         </button>   
     </div>
-        <!-- <div>
-            <h2>profile</h2>  
-        </div> -->
-            <div>
+         <!-- <div>
                 <h1>HEY, CHECKOUT MY GITHUB PAGE</h1>
             </div><br>
-             <!-- <div class="card">
-                 </div> -->
                     <div>
                         <h2>Mwaa123</h2>  
                     </div>
-                        <div *ngIf="profile">
-                            <div class="panel panel-default">
-                                 <div  class="panel-heading">
-                                     MY NAME IS  {{profile.name}}<br><p>LOG IN @ <a href="{{profile.login}}" target_blank>{{profile.login}}</a></p>
-                                 </div>
-                                  <div class=body>
-                                     <div class="row">
-                                         <div class="col-sm-3">
-                                             <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="a profile picture"><br><br>2
 
-                                         </div><br><br><br>
-                                     </div>   
-                                            <div class="col-sm-5">
-                                                <ul class="list-group"></ul>
-                                                <li class="list-group-item">MY BLOG:<br><a href="{{profile.blog}}"target_blank>{{profile.blog}}</a></li>
-                                                <li class="list-group-item">{{profile.bio}}</li>
-                                                <li class="list-group-item">VIEW PROFILE<br><a href="{{profile.html_url}}"target_blank> {{profile.html_url}}</a></li>
-                                             </div>
-                                              <div class="row">
-                                             <div class="col-sm-4">
-                                                 <ul>
-                                                    
-                                                         <li class="label label-default"> public repos  {{profile.public_repos}}</li><br>
-                                                         <li class="label label-primary">public gists  {{profile.public_gists}}</li><br>
-                                                         <li class="label label-default">Followers  {{profile.followers}} </li><br>
-                                                         <li class="label label-default">following  {{profile.following}} </li><br>
-                                                     </ul>
-                                                     <!-- <p><a href="{{profile.html_url}}"target="_blank" class="btn-btn-sucess-btn-sm">view my profile in GITHUB</a></p> -->
-                                                     <div class="panel.panel-default">
-                                                        <div class="panel-heading">
-                                                            <h3 class="panel-title">Repos</h3>
-                                                         </div>
-                                                         <div class="panel-body" *ngFor="let  repo of repos">
-                                                            <p>
-                                                        
-                                                                {{repo.name}}
-                                                            </p>
-                                                         </div>
-                                                 </div>
-                                             </div> 
-
-
-                                     
-
-                                 </div>
-                            </div>
-                            
-                        </div>
                     
+                      
+                       <div class="row">
+                          
+                           <div class="col-md-3">
+                               <div class="body-card">
+                                   <img src="{{user.avatar_url}} " alt="" class="img"><br>
+                                   <p  class="name"><i style="font-size:20px"></i>&nbsp;{{user.login}}</p> 
+                                   <p>Updated:<span><i class=""></i>&nbsp;{{user.updated_at|date}}</span></p> 
+                                   <a href="{{user.html_url}}" class="git"><i class="fa fa-github" ></i> &nbsp; <span>Github</span></a>
+                                </div>
+                           </div>
+                           <div class="col-md-9">
+                               <div class="gen">
+                                    <div class="info">
+                                        <p>Repositories<span class="three">{{user.public_repos}}</span></p>
+                                    </div>
+                                      <div class="info">
+                                          <p>Followers<span class="three">{{user.followers}}</span></p>
+                                      </div>
+                                      <div class="info">
+                                          <p>Following<span class="three">{{user.following}}</span></p>
+                                     </div>
+                                     <div class="info">
+                                        <p>Overviews<span class="three">{{user.public_gists}}</span></p>
+                                    </div>
+                               </div>
+                               <hr>
+                               <div>
+                                   <h2 class="text-center">Repositories</h2>
+                                   <div class="all">
+                                        <div class="card" *ngFor='let repository of repo'>
+                                            <div class="card-body four">
+                                                <a href="{{repository.html_url}}"><h3 class="card-title">{{repository.name}}</h3></a>
+                                                <p>{{repository.description}}</p>
+                                                    <div class="line">
+                                                        <p class="repo1">{{repository.language}}</p>
+                                                        <p class="repo2">Updated:<i class="fa fa-clock-o date "></i>&nbsp;{{repository.created_at|dateCount}}</p>
+                                                        <p class="repo"><i  aria-hidden="true" id="one"></i>{{repository.forks}}</p>
+                                                       
+
+                                                    </div>
+                                                
+                                            </div>
+                                        </div> -->
+                                   </div>
+                               </div>
+                           </div>
+                        </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+                        
+                     

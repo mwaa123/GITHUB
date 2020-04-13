@@ -7,16 +7,24 @@ import  { FormsModule} from '@angular/forms'
 import { AppRoutingModule,routingComponets } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HubComponent } from './hub/hub.component';
-// import { LandingPageComponent } from './landing-page/landing-page.component';
-// import { AboutComponent } from './about/about.component';
-
+import { SearchFormComponent } from './search-form/search-form.component';
+import { RepoComponent } from './repo/repo.component';
+import{ NavBarComponent} from './nav-bar/nav-bar.component';
+import { HighlightDirective } from './highlight.directive';
+import { DateCountPipe } from './date-count.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     HubComponent,
-    routingComponets
-    // LandingPageComponent,
-    // AboutComponent
+    routingComponets,
+    SearchFormComponent,
+    RepoComponent,
+    NavBarComponent,
+    HighlightDirective,
+    DateCountPipe
+
+  
+  
   ],
   imports: [
     BrowserModule,
